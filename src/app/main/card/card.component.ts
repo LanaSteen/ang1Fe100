@@ -1,6 +1,6 @@
 
 import { Component, Input } from '@angular/core';
-import { ButtonComponent } from '../../button/button.component';
+import { ButtonComponent } from '../button/button.component';
 
 
 @Component({
