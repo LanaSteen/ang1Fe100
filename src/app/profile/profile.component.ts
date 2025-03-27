@@ -10,16 +10,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
-  student= {
-    name: "",
-    age: null,
-    grade: "",
-    subjects: "",
-    isEnrolled: false,
-    address: {
-    street: "",
-    city: "",
-    zip: ""
-    }
-  };
+ 
 }
