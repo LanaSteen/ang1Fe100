@@ -9,33 +9,39 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent {
-  student= {
+  student = {
     name: "",
     age: null,
     grade: "",
     subjects: "",
     isEnrolled: false,
     address: {
-    street: "",
-    city: "",
-    zip: ""
+      street: "",
+      city: "",
+      zip: ""
     }
   };
-  studentAdd={
-    name: "",
-    age: null,
-    grade: "",
-    subjects: "",
-    isEnrolled: false,
-    address: {
-    street: "",
-    city: "",
-    zip: ""
-    }
+
+  studentList: any[] = [];
+
+  addStudent() {
+    this.studentList.push(structuredClone(this.student));
+    console.log(this.studentList);
+    this.resetStudent();
   }
-  addStudent(){
-    this.studentAdd.name = this.student.name
-    console.log(this.studentAdd.name);
+  resetStudent() {
+    this.student = {
+      name: "",
+      age: null,
+      grade: "",
+      subjects: "",
+      isEnrolled: false,
+      address: {
+        street: "",
+        city: "",
+        zip: ""
       }
-    }
+    };
+  }
+}
 

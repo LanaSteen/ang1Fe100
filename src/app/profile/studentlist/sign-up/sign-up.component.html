@@ -1,29 +1,28 @@
-<form class="form-container">
-    <label for="name">Name:</label>
-    <input [(ngModel)]="student.name" id="name" type="text" required placeholder="" [ngModelOptions]="{standalone: true}">
-  
-    <label for="age">Age:</label>
-    <input [(ngModel)]="student.age" id="age" type="number" required placeholder="" [ngModelOptions]="{standalone: true}">
-  
-    <label for="grade">Grade:</label>
-    <input [(ngModel)]="student.grade" id="grade" type="text" required [ngModelOptions]="{standalone: true}">
-  
-    <label for="subjects">Subjects:</label>
-    <input [(ngModel)]="student.subjects" id="subjects" type="text" [ngModelOptions]="{standalone: true}">
-  
-    <label>
-      <input [(ngModel)]="student.isEnrolled" type="checkbox" [ngModelOptions]="{standalone: true}"> Enrolled
-    </label>
+<form #studentForm="ngForm" class="form-container" (ngSubmit)="addStudent()" novalidate>
+  <label for="name">Name:</label>
+  <input [(ngModel)]="student.name" id="name" type="text" name="name" required placeholder="">
 
-    <label for="street">Street:</label>
-    <input [(ngModel)]="student.address.street" id="street" type="text" [ngModelOptions]="{standalone: true}">
-  
-    <label for="city">City:</label>
-    <input [(ngModel)]="student.address.city" id="city" type="text" [ngModelOptions]="{standalone: true}">
-  
-    <label for="zip">ZIP Code:</label>
-    <input [(ngModel)]="student.address.zip" id="zip" type="text" [ngModelOptions]="{standalone: true}">
-  
-    <button type="submit" class="submit" (click)="addStudent()">Register</button>
-  </form>
-  
+  <label for="age">Age:</label>
+  <input [(ngModel)]="student.age" id="age" type="number" name="age" required placeholder="">
+
+  <label for="grade">Grade:</label>
+  <input [(ngModel)]="student.grade" id="grade" type="text" name="grade" required>
+
+  <label for="subjects">Subjects:</label>
+  <input [(ngModel)]="student.subjects" id="subjects" type="text" name="subjects">
+
+  <label>
+    <input [(ngModel)]="student.isEnrolled" type="checkbox" name="isEnrolled" required> Enrolled
+  </label>
+
+  <label for="street">Street:</label>
+  <input [(ngModel)]="student.address.street" id="street" type="text" name="street" required>
+
+  <label for="city">City:</label>
+  <input [(ngModel)]="student.address.city" id="city" type="text" name="city" required>
+
+  <label for="zip">ZIP Code:</label>
+  <input [(ngModel)]="student.address.zip" id="zip" type="text" name="zip" required>
+
+  <button type="submit" class="submit" [disabled]="studentForm.invalid">Register</button>
+</form>
