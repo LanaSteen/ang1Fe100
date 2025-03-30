@@ -1,6 +1,6 @@
 <div *ngIf="studentList.length > 0; else noStudents">
     <h2>Student List</h2>
-    <ul>
+    <ul class="form">
       <li *ngFor="let student of studentList">
         <strong>Name:</strong> {{ student.name }}<br>
         <strong>Age:</strong> {{ student.age }}<br>
