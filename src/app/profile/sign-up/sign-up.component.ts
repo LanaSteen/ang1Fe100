@@ -1,10 +1,12 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { StudentlistComponent } from "./studentlist/studentlist.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule, StudentlistComponent],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss'
 })
@@ -29,6 +31,7 @@ export class SignUpComponent {
     console.log(this.studentList);
     this.resetStudent();
   }
+
   resetStudent() {
     this.student = {
       name: "",
@@ -44,4 +47,3 @@ export class SignUpComponent {
     };
   }
 }
-
