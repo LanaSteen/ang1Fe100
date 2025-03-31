@@ -1,4 +1,15 @@
 .form{
     display: flex;
-
+    width: 250px ;
+    gap: 10px;
+    flex-direction: column;
+    align-items: start;
+    list-style: none;
+    justify-content: start;
+    border: 2px solid black;
+    padding: 10px;
+    flex: wrap;
+    li{
+        border: solid 1px gray ;
+    }
 }
