@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { StudentlistComponent } from "./studentlist/studentlist.component";
 import { CommonModule } from '@angular/common';
+import { IStudent } from '../../Models/student';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,7 +12,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent {
-  student = {
+
+  student : IStudent ={
     name: "",
     age: null,
     grade: "",
@@ -20,31 +22,18 @@ export class SignUpComponent {
     address: {
       street: "",
       city: "",
-      zip: ""
+      zip: null
     }
-  };
-
-  studentList: any[] = [];
-
-  addStudent() {
-    this.studentList.push(structuredClone(this.student));
-    console.log(this.studentList);
-    this.resetStudent();
   }
-
-  resetStudent() {
-    this.student = {
-      name: "",
-      age: null,
-      grade: "",
-      subjects: "",
-      isEnrolled: false,
-      address: {
-        street: "",
-        city: "",
-        zip: ""
-      }
-    };
+  studentList: IStudent[] = [];
+  save(form: NgForm){
+    if(form.valid){
+      this.studentList.push({...this.student,
+        address:{...this.student.address}
+      })
+      console.log(this.studentList)
+    }
+    form.resetForm();
   }
   deleteStudent(ind: number) {
     this.studentList.splice(ind, 1);
@@ -53,4 +42,4 @@ export class SignUpComponent {
     this.student = this.studentList[ind];
     this.studentList.splice(ind, 1)
   }
-}
+  };

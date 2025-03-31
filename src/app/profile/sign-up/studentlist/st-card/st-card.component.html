@@ -1,0 +1,10 @@
+<ul class="form">
+    <li>Name: {{ student.name }}</li>
+    <li>Age: {{ student.age }}</li>
+    <li>Grade:{{ student.grade }}</li>
+    <li>Subjects:{{ student.subjects }}</li>
+    <li>Enrolled: {{ student.isEnrolled ? 'Yes' : 'No' }}</li>
+    <li>Address: {{ student.address.street }}, {{ student.address.city }}, {{ student.address.zip }}</li>
+    <button (click)="deleteStudent(ind)" class="del-btn">Delete</button>
+    <button (click)="editStudent(ind)" class="edit-btn">Edit</button>
+</ul>

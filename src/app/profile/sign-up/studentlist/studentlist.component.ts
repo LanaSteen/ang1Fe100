@@ -1,16 +1,18 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { StCardComponent } from './st-card/st-card.component'
+import { IStudent } from '../../../Models/student';
 
 
 @Component({
   selector: 'app-studentlist',
   standalone: true,
-  imports: [CommonModule, CommonModule],
+  imports: [CommonModule, CommonModule, StCardComponent],
   templateUrl: './studentlist.component.html',
   styleUrl: './studentlist.component.scss'
 })
 export class StudentlistComponent {
-@Input() studentList: any[]=[];
+@Input() studentList: IStudent[]=[];
 
 @Output() deleteSt = new EventEmitter<number>()
 @Output() editSt = new EventEmitter<number>()

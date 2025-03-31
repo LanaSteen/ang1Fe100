@@ -1,17 +1,12 @@
-<div *ngIf="studentList.length > 0; else noStudents">
+
     <h2>Student List</h2>
-    <ul class="form" *ngFor="let student of studentList let ind = index">
-      <li>Name: {{ student.name }}</li>
-      <li>Age: {{ student.age }}</li>
-      <li>Grade:{{ student.grade }}</li>
-      <li>Subjects:{{ student.subjects }}</li>
-      <li>Enrolled: {{ student.isEnrolled ? 'Yes' : 'No' }}</li>
-      <li>Address: {{ student.address.street }}, {{ student.address.city }}, {{ student.address.zip }}</li>
-      <button (click)="deleteStudent(ind)" class="del-btn">Delete</button>
-      <button (click)="editStudent(ind)" class="edit-btn">Edit</button>
-    </ul>
-  </div>
-  
-  <ng-template #noStudents>
-    <p>No students registered yet.</p>
-  </ng-template>
+
+
+  <app-st-card 
+          *ngFor="let studentFrParr of studentList let ind = index" 
+          [student]="studentFrParr"
+          [ind]="ind"
+          (delSt)="deleteStudent($event)"
+          (editSt)="editStudent($event)"
+          
+  ></app-st-card>
