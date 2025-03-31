@@ -27,4 +27,6 @@
   <button type="submit" class="submit" [disabled]="studentForm.invalid">Register</button>
 </form>
 
-<app-studentlist [studentList]="studentList"></app-studentlist>
+<app-studentlist [studentList]="studentList"
+(deleteSt)="deleteStudent($event)"
+></app-studentlist>

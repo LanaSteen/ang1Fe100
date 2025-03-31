@@ -46,4 +46,7 @@ export class SignUpComponent {
       }
     };
   }
+  deleteStudent(ind: number) {
+    this.studentList.splice(ind, 1);
+  }
 }

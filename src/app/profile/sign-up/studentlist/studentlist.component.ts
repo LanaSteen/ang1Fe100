@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
@@ -10,5 +10,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './studentlist.component.scss'
 })
 export class StudentlistComponent {
-@Input() studentList: any[] = [];
+@Input() studentList: any[]=[];
+
+@Output() deleteSt = new EventEmitter<number>()
+deleteStudent(ind: number) {
+  this.deleteSt.emit(ind);
+}
 }
