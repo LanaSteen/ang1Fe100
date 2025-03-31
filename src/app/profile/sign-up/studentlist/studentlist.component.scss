@@ -10,8 +10,12 @@
     li{
         border: solid 1px gray ;
     }
-    button{
+    .del-btn{
         color: black;
         background-color: red;
+    }
+    .edit-btn{
+        color: black;
+        background-color: orange;
     }
 }

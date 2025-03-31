@@ -49,4 +49,8 @@ export class SignUpComponent {
   deleteStudent(ind: number) {
     this.studentList.splice(ind, 1);
   }
+  editStudent(ind: number) {
+    this.student = this.studentList[ind];
+    this.studentList.splice(ind, 1)
+  }
 }

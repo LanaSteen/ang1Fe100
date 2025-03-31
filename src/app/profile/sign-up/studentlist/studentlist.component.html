@@ -7,7 +7,8 @@
       <li>Subjects:{{ student.subjects }}</li>
       <li>Enrolled: {{ student.isEnrolled ? 'Yes' : 'No' }}</li>
       <li>Address: {{ student.address.street }}, {{ student.address.city }}, {{ student.address.zip }}</li>
-      <button (click)="deleteStudent(ind)">Delete</button>
+      <button (click)="deleteStudent(ind)" class="del-btn">Delete</button>
+      <button (click)="editStudent(ind)" class="edit-btn">Edit</button>
     </ul>
   </div>
   
