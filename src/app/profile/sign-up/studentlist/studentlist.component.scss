@@ -1,21 +1,4 @@
-.form{
+app-st-card {
+    width: 400px;
     display: flex;
-    gap: 10px;
-    align-items: start;
-    list-style: none;
-    justify-content: start;
-    border: 2px solid black;
-    padding: 10px;
-    flex: wrap;
-    li{
-        border: solid 1px gray ;
-    }
-    .del-btn{
-        color: black;
-        background-color: red;
-    }
-    .edit-btn{
-        color: black;
-        background-color: orange;
-    }
 }

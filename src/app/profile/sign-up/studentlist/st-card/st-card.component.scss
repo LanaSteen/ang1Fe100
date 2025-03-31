@@ -1,0 +1,42 @@
+.form{
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    list-style: none;
+    flex-direction: column;
+    justify-content: start;
+    border: 2px solid black;
+    padding: 10px;
+    flex: wrap;
+    margin: 10px;
+    width: 200px;
+    li{
+        font-weight: 800;
+        border-bottom: 1px solid gray;
+        border-radius: 5px;
+    }
+    .del-btn{
+        color: black;
+        background-color: red;
+        padding: 5px;
+        font-weight: 900;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{
+            background-color: red;
+            color: white;
+        }
+    }
+    .edit-btn{
+        color: black;
+        background-color: orange;
+        padding: 5px;
+        font-weight: 900;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{
+            background-color: orange;
+            color: white;
+        }
+    }
+}

@@ -1,12 +1,8 @@
 
-    <h2>Student List</h2>
-
-
   <app-st-card 
           *ngFor="let studentFrParr of studentList let ind = index" 
           [student]="studentFrParr"
           [ind]="ind"
           (delSt)="deleteStudent($event)"
-          (editSt)="editStudent($event)"
-          
+          (editSt)="editStudent($event)"        
   ></app-st-card>
