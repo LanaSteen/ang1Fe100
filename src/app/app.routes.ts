@@ -3,6 +3,6 @@ import { MainComponent } from './main/main.component';
 import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
-  { path: '', component: MainComponent },
+  { path: 'home', component: MainComponent },
   { path: 'profile', component: ProfileComponent }
 ];
