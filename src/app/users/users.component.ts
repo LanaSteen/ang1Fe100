@@ -1,18 +1,21 @@
 import { Component } from '@angular/core';
 import { IUser } from '../Models/user';
+import { FormsModule } from '@angular/forms';
+import { UserCardComponent } from "./user-card/user-card.component";
+import { CommonModule } from '@angular/common';
 
 
 
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports:[],
+  imports: [FormsModule, UserCardComponent, CommonModule],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })
  
-export class Users{
-  private users: IUser[] = [
+export class UserComponent{
+    userList: IUser[] = [
     {
       id: 1,
       email: 'george.bluth@reqres.in',
