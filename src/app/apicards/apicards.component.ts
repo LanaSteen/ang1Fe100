@@ -19,5 +19,4 @@ export class ApiCardsComponent{
  ngOnInit(){
   this.httpUsers.getAllUsers().subscribe( (resp : any) => console.log(resp.data))
  }
- UserArr: IUser[]=[]
 }

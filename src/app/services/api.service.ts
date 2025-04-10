@@ -7,12 +7,12 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  constructor(private http : HttpClient) {}
-  
+  constructor(private http : HttpClient) { }
+
   getAllUsers(){
     return this.http.get('https://reqres.in/api/users')
-    
-    
   }
 
 }
+
+
