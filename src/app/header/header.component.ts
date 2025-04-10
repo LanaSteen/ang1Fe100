@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +10,10 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   logo = 'Steam';
-  constructor() {
+  constructor(private rout : Router) {
     console.log('HeaderComponent');
+  }
+  api(){
+    this.rout.navigateByUrl("/apicards")
   }
 }
