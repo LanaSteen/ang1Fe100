@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { IUser } from '../Models/user';
+import { User } from '../Models/user';
 import { routes } from '../app.routes';
 
 @Component({
@@ -20,15 +20,9 @@ export class DetailsComponent {
     this.singleUser = this.userList.find((user)=>user.id == id)!
     console.log(this.singleUser)
     }
-    singleUser: IUser = {
-      id: 0,
-      email: '',
-      first_name: '',
-      last_name: '',
-      avatar: '',
-    };
+    singleUser? : User = new User()
 
-    userList: IUser[] = [
+    userList: User[] = [
     {
       id: 1,
       email: 'george.bluth@reqres.in',

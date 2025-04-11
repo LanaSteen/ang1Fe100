@@ -1,9 +1,21 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class CommonFuncService {
+export class ApiService {
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
+
+  getAll(url : string){
+    return this.http.get(url)
+  }
+  getById(url : string, id : number){
+    return this.http.get(`${url}/${id}`)
+  }
+
 }
+
+
