@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IUser } from '../Models/user';
+import { User } from '../Models/user';
 import { FormsModule } from '@angular/forms';
 import { UserCardComponent } from "./user-card/user-card.component";
 import { CommonModule } from '@angular/common';
@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 })
  
 export class UserComponent{
-    userList: IUser[] = [
+    userList: User[] = [
     {
       id: 1,
       email: 'george.bluth@reqres.in',

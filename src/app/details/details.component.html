@@ -1,6 +1,6 @@
 <div class="card" >
-  <img [src]="singleUser.avatar" alt="Avatar" />
-  <h1>{{ singleUser.first_name }} {{ singleUser.last_name }}</h1>
-  <h2>{{ singleUser.email }}</h2>
+  <img [src]="singleUser?.avatar" alt="Avatar" />
+  <h1>{{ singleUser?.first_name }} {{ singleUser?.last_name }}</h1>
+  <h2>{{ singleUser?.email }}</h2>
   <button routerLink="/users">Go back</button>
 </div>

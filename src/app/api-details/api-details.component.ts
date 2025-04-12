@@ -30,16 +30,15 @@ getSingleUser(id: number) {
     // this.commonFunc.printinConsole("user info", JSON.stringify(this.singleUser));
   });
 }
+userArr : User[] =[]
 
 
-}
 ngOnInit(){
   this.httpUsers.getAllUsers().subscribe( (resp : any) => {
   console.log("HELLO",resp.data)
   this.userArr = (resp.data)
 
  })
- }
- userArr: User[]=[]
+}
 
 }

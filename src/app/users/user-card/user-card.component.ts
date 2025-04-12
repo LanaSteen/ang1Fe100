@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
-import { IUser } from '../../Models/user';
+import { User } from '../../Models/user';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { IUser } from '../../Models/user';
   styleUrls: ['./user-card.component.scss']
 })
 export class UserCardComponent {
-  @Input() userList!: IUser;
+  @Input() userList!: User;
   
 
   constructor(private router: Router) {}

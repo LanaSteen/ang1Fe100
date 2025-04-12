@@ -13,7 +13,7 @@ import { routes } from '../app.routes';
 export class DetailsComponent {
 
   constructor(private rout: ActivatedRoute){
-    this.rout.params.subscribe(data=> this.getSingleUser(data[`id`]))
+    this.rout.params.subscribe((data : any)=> this.getSingleUser(data[`id`]))
   }
 
     getSingleUser(id:Number){
